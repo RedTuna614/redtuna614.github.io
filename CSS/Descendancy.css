@@ -112,6 +112,7 @@ iframe{
 .codeBox .gist .gist-data{
 	overflow:auto;
 	max-height: 700px;
+	max-width:890px;
 	border: 1px;
 	margin: 0;
 }
@@ -126,6 +127,7 @@ iframe{
 .code .gist .gist-data{
 	overflow:auto;
 	max-height: 700px;
+	max-width:890px;
 	border:1px;
 	margin:0;
 }
@@ -143,4 +145,5 @@ iframe{
 @media(max-height:600px)
 {
 	.codeSect.show{max-height:2400px;}
+	.codeSect p{max-width:895px;}
 }
