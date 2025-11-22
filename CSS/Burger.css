@@ -40,7 +40,7 @@
 		flex-direction:column;
 		justify-content:center;
 		align-items:center;
-		margin-top: 8rem;
+		margin-top: 10rem;
 		visibility:none;
 		z-index:1000;
 	}
