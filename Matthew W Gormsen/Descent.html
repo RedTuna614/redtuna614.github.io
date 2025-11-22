@@ -1,0 +1,105 @@
+<!DOCUMENTTYPE html>
+<html>
+<head>
+<title> MGormsen | Descent </title>
+<link href="CSS/Base.css" rel="stylesheet">
+<link href="CSS/Descendancy.css" rel="stylesheet">
+<link href="CSS/Burger.css" rel="stylesheet">
+<script src="JS/Burger.js" type="module" defer></script>
+<script src="JS/Base.js" type="module" defer></script>
+<script type="module">
+	import{showCodeSection} from './JS/Base.js';
+	document.addEventListener('DOMContentLoaded', () => 
+	{
+		document.getElementById('dngGenBtn').addEventListener('click', ()=>
+		{ showCodeSection('dungeonGeneration') });
+	});
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+<header>
+<h1 id="Descent"> Descent </h1>
+<!-- Burger -->
+<input type="checkbox" id="nav-toggle" class="nav-toggle">
+
+<label class="hamburger" for="nav-toggle">
+	<span></span><span></span><span></span>
+</label>
+
+<h4 class="nav-menu">
+<ul>
+	<li><a href="Home.html"> Home</a> </li>
+	<li> <a href="Projects.html"> My Projects </a> </li>
+	<li> <a href="Contact.html"> Contact </a> </li>
+	<li> <a href="About.html"> About </a> </li>
+	<li> <a href="Resume.html"> Resume </a> </li>
+</ul>
+</h4>
+</header>
+<main>
+<div class="Project" style="background-image: url('./Images/Descent.png');">
+	<h2> Descent </h2>
+	<iframe width="980" height="553" src="https://www.youtube-nocookie.com/embed/N3_wsKj4_os" title="Descent: Procedural Dungeon" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+	<p id="projectText">
+Project Descent is a 3D sci-fi, fps dungeon crawler with rogue like elements, where the player must complete a variety of missions in an unexplored alien vault to earn as many credits as possible before meeting their untimely demise in the vault.
+<br><br>
+Currently the game is very early in development and is being developed by myself in the Unreal 5.4 engine using a combination of C++ and blueprint.
+	</p>
+</div>
+<div id="responsibilities">
+	<div>
+		<h2>Responsibilities</h2>
+		<p class="resContent">Game Developer, Designer <br><br> GitHub: <a href="https://github.com/RedTuna614/Project_Descent/tree/master"> Project Descent</a> <br> Project Descent<br> 05/24 - Ongoing </p>
+	</div>
+	<div class="resContent">
+		<ul style="max-width:550px;">
+			<li class="resList"> Design a fun first person shooter </li>
+			<li class="resList"> Design and code unique and interesting enemies </li>
+			<li class="resList"> Develop a dynamic weapon system </li>
+			<li class="resList"> Program a procedural dungeon generation system, allowing for the quick creation of dungeons of various sizes. </li>
+			<li class="resList"> Develop the player character </li>
+		</ul>
+	</div>
+</div>
+<div id="codeSnippets">
+	<h2>Programming and Code Snippets</h2>
+	<button type ="button" id="dngGenBtn" class="codeBtn">
+		<h3>Dungeon Generation</h3>
+	</button>
+	<div class="codeSect" id="dungeonGeneration">
+		<h3>Dungeon Generation</h3>
+		<p>When making the the generation system, I took inspiration from how levels are generated in, Warframe where it seems that the level is generated from a selection of prebuilt rooms that are placed and connected at random.  To make the system I have each room store the transforms of where it's neighbors will connect to the room, and either a door or dead end will spawn, and separated the rooms in different types, halls, chambers, stairs, goal, and start. Since each level needs a starting room, I made the generator create the start room first, and then generate the rest of the level up the given size.  The size of level being the number of rooms generated. <br> </p>
+		<div class="codeBox">
+		
+		<div style="display:flex; justify-content:flex-start;">
+			<button type="button" class="codetab" data-target="header">
+				<h3 class="tabText" data-target="header">
+					Header
+				</h3>
+			</button>
+			<button type="button" class="codetab" data-target="cpp">
+				<h3 class="tabText" data-target="cpp">
+					CPP
+				</h3>
+			</button>
+		</div>
+		<div class="code" data-target="header">
+		<script 		src="https://gist.github.com/RedTuna614/24180a933a8aec57f1d7070a3b0f4b2d.js">
+		</script>
+		</div>
+		<div class="code" data-target="cpp">
+		<script 					src="https://gist.github.com/RedTuna614/05bb1aca73e5287b647cb3a07146e30d.js">
+		</script>
+		</div>
+		</div>
+	</div>
+</div>	
+</main>
+<footer>
+	<h3> Matthew Gormsen </h3>
+	<a href="mailto:mwgormsen@gmail.com">mwgormsen@gmail.com</a>
+</footer>
+</body>
+</html>

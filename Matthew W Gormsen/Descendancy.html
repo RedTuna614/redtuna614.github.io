@@ -1,0 +1,119 @@
+<!DOCUMENTTYPE html>
+<html>
+<head>
+<title> MGormsen | Descendancy </title>
+<link href="CSS/Base.css" rel="stylesheet">
+<link href="CSS/Descendancy.css" rel="stylesheet">
+<link href="CSS/Burger.css" rel="stylesheet">
+<script src="JS/Burger.js" type="module" defer></script>
+<script src="JS/Base.js" type="module" defer></script>
+<script type="module">
+	import{showCodeSection} from './JS/Base.js';
+	document.addEventListener('DOMContentLoaded', () => 
+	{
+		document.getElementById('combatBtn').addEventListener('click', ()=>
+		{ showCodeSection('CombatManager') });
+		document.getElementById('crusadeBtn').addEventListener('click', ()=>
+		{ showCodeSection('CrusaderAI') });
+	});
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+<header>
+<h1 id="Descendancy"> Descendancy </h1>
+<!-- Burger -->
+<input type="checkbox" id="nav-toggle" class="nav-toggle">
+
+<label class="hamburger" for="nav-toggle">
+	<span></span><span></span><span></span>
+</label>
+
+<h4 class="nav-menu">
+<ul>
+	<li><a href="Home.html"> Home</a> </li>
+	<li> <a href="Projects.html"> My Projects </a> </li>
+	<li> <a href="Contact.html"> Contact </a> </li>
+	<li> <a href="About.html"> About </a> </li>
+	<li> <a href="Resume.html"> Resume </a> </li>
+</ul>
+</h4>
+</header>
+<main>
+<div class="Project" style="background-image: url('./Images/DescendancyBg.jpg');">
+	<h2> Descendancy </h2>
+	<iframe width="980" height="553" src="https://www.youtube-nocookie.com/embed/td9TdmEng9A" title="Capstone Gameplay" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+	<p id="projectText">
+My capstone project is an isometric squad based tactics game.  Within the game the player must take command of four hero mech units and destroy all other hostile mechs and drones.  The player must think and use sound tactics when commanding their mechs if they hope to succeed. <br>With this project my team and I tasked ourselves with making a game prototype, within a couple months, built within Unreal Engine 5.1 using both C++ and Blueprint
+	</p>
+</div>
+<div id="responsibilities">
+	<div>
+		<h2>Responsibilities</h2>
+		<p class="resContent">Lead Designer, Lead Programmer <br> <br> SUNY Canton Capstone Project<br> September 2023 - May 2024 </p>
+	</div>
+	<div class="resContent">
+		<ul>
+			<li class="resList"> Design a fun isometric tactics game </li>
+			<li class="resList"> Design a fun and engaging gameplay loop </li>
+			<li class="resList"> Program and design AI enemy units </li>
+			<li class="resList"> Program and design engaging game UI </li>
+			<li class="resList"> Program and design an effective player inventory UI </li>
+			<li class="resList"> Program a system to manage the game's turn order </li>
+		</ul>
+	</div>
+</div>
+<div id="codeSnippets">
+	<h2>Programming and Code Snippets</h2>
+	<button type="button" id="combatBtn" class="codeBtn"> 
+		<h3>Turn Order Sorting Algorithm</h3>
+	</button>
+	<div class="codeSect" id="CombatManager">
+		<h3>Turn Order Sorting algorithm</h3>
+		<p> When the combat manager, the system that controls the turn order, was originally written it stored all units in combat in an unsorted array, and kept track of whose turn it was with an integer called active unit.  While this worked, when adding the UI for the turn order, I felt that rather than sorting the unsorted turn order in the UI's blueprint, a new way of tracking the turn order was needed, specifically one that used a sorted array of all units in combat.  I thought it would be better to rewrite how the combat manager tracked the order rather than just sorting it in the UI, because this way the turn order would only be tracked in one location, the combat manager, rather than two different places with the UI tracking a sorted turn order and the combat manager tracking an unsorted turn order.  Below is the algorithm I wrote to sort and track the turn order in the combat manager.  In hindsight, knowing what I do now I'd rewrite the algorithm to use built the functions built into TArrays in Unreal such as sort, pushback, and popback. <br> </p>
+		<div class="codeBox">
+			<script src="https://gist.github.com/RedTuna614/8e146e5140813e56ba80eafebf1ac32b.js">
+			</script>
+		</div>
+	</div>
+	<button type ="button" id="crusadeBtn" class="codeBtn">
+		<h3>Enemy Crusader AI</h3>
+	</button>
+	<div class="codeSect" id="CrusaderAI">
+		<h3>Enemy Crusader AI</h3>
+		<p>When making the enemy AI for the game it I originally kept it simple and just had each AI unit target and attack the closest player, or hero unit.  If the enemy had a ranged weapon it would move away from the targeted hero unit before attacking, and would just move towards the targeted unit if the enemy either had a melee or the targeted unit was outside their attack range.  Later on in an effort to mnake the game more engaging the enemy AI was made more complicated with each unit using a different method to find which player unit it would target.  For example, one enemy would prioritize targeting the closest player unit, while another would instead focus on the player unit with the least health remaining. Due to the code's complexity and since each enemy would prioritize a different player unit, the algorithm for finding which player unit to target was written in C++ as an actor component, while simpler methods that each AI used, such as movement, would be written in blueprint.  Below is the target finding algorithm used by one enemy unit. <br> </p>
+		<div class="codeBox">
+		
+		<div style="display:flex; justify-content:flex-start;">
+			<button type="button" class="codetab" data-target="header">
+				<h3 class="tabText" data-target="header">
+					Header
+				</h3>
+			</button>
+			<button type="button" class="codetab" data-target="cpp">
+				<h3 class="tabText" data-target="cpp">
+					CPP
+				</h3>
+			</button>
+		</div>
+		<div class="code" data-target="header">
+		<script
+		src="https://gist.github.com/RedTuna614/16eacfe9b57123cee9aa296d4f9d26a4.js">
+		</script>
+		</div>
+		<div class="code" data-target="cpp">
+		<script
+		src="https://gist.github.com/RedTuna614/c4960e421297640037abfaa25ec74214.js">
+		</script>
+		</div>
+		</div>
+	</div>
+</div>	
+</main>
+<footer>
+	<h3> Matthew Gormsen </h3>
+	<a href="mailto:mwgormsen@gmail.com">mwgormsen@gmail.com</a>
+</footer>
+</body>
+</html>

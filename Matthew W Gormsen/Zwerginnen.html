@@ -1,0 +1,110 @@
+<!DOCUMENTTYPE html>
+<html>
+<head>
+<title> MGormsen | Zwerginnen </title>
+<link href="CSS/Base.css" rel="stylesheet">
+<link href="CSS/Descendancy.css" rel="stylesheet">
+<link href="CSS/Burger.css" rel="stylesheet">
+<script src="JS/Burger.js" type="module" defer></script>
+<script src="JS/Base.js" type="module" defer></script>
+<script type="module">
+	import{showCodeSection} from './JS/Base.js';
+	document.addEventListener('DOMContentLoaded', () => 
+	{
+		document.getElementById('playerbtn').addEventListener('click', ()=>
+		{ showCodeSection('thePlayer') });
+	});
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+<header>
+<h1 id="Zwerginnen"> Zwerginnen </h1>
+<!-- Burger -->
+<input type="checkbox" id="nav-toggle" class="nav-toggle">
+
+<label class="hamburger" for="nav-toggle">
+	<span></span><span></span><span></span>
+</label>
+
+<h4 class="nav-menu">
+<ul>
+	<li><a href="Home.html"> Home</a> </li>
+	<li> <a href="Projects.html"> My Projects </a> </li>
+	<li> <a href="Contact.html"> Contact </a> </li>
+	<li> <a href="About.html"> About </a> </li>
+	<li> <a href="Resume.html"> Resume </a> </li>
+</ul>
+</h4>
+</header>
+<main>
+<div class="Project" style="background-image: url('./Images/Hallway.png');">
+	<h2> Zwerginnen </h2>
+	<iframe width="980" height="553" src="https://www.youtube-nocookie.com/embed/xVsOJcAH8nc" title="Zwerginnen Gameplay" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+	<p id="projectText">
+Zwerginnen is a single player first person shooter where the player's objective is to kill all of the rouge robots within an abandoned factory.  To accomplish their task the player must run and gun as they kill a variety of enemies to earn coins that can be used to obtain better weapons from vending machines.
+<br><br>
+Using C++ and blueprint in the Unreal 5 engine, our team tasked ourselves with designing, developing, and building a game prototype in one school semester.
+	</p>
+</div>
+<div id="responsibilities">
+	<div>
+		<h2>Responsibilities</h2>
+		<p class="resContent">Game Programmer and designer <br><br> SUNY Canton GAME 470 Project<br> 01/23 - 05/23 </p>
+	</div>
+	<div class="resContent">
+		<ul style="max-width:550px;">
+			<li>Design a fun first person shooter</li>
+  			<li>Design a fun and engaging gameplay loop</li>
+  			<li>Program and design the player character</li>
+  			<li>Program and design an effective game HUD</li>
+ 			<li>Program and design the Vending Machine UI</li>
+  			<li>Program a script to ensure the player couldn't progress until a 				room was cleared of enemies</li>
+  			<li>Program the player animation blueprint</li>
+  			<li>Design, create, and program the VFX (Excluding the boss 				enemy)</li>
+  			<li>3D Model, rig, and animate the player character</li>
+  			<li>Design and create the game's levels and combat encounters</li>
+		</ul>
+	</div>
+</div>
+<div id="codeSnippets">
+	<h2>Programming and Code Snippets</h2>
+	<button type ="button" id="playerbtn" class="codeBtn">
+		<h3>The Player</h3>
+	</button>
+	<div class="codeSect" id="thePlayer">
+		<h3>The Player</h3>
+		<p>When making the player character for the game I decided to give the player an advantage over the enemies, in an effort to make the gmae more fun. To achieve this the player's weapons would use a raycast, or line trace in Unreal, when fighting the enemies so that the player could more easily shot and hit enemies while on the move, compared to aiming and shooting bullet with simulated physics, velocity and travel time. <br> </p>
+		<div class="codeBox">
+		
+		<div style="display:flex; justify-content:flex-start;">
+			<button type="button" class="codetab" data-target="header">
+				<h3 class="tabText" data-target="header">
+					Header
+				</h3>
+			</button>
+			<button type="button" class="codetab" data-target="cpp">
+				<h3 class="tabText" data-target="cpp">
+					CPP
+				</h3>
+			</button>
+		</div>
+		<div class="code" data-target="header">
+		<script 				src="https://gist.github.com/RedTuna614/7f972c951dcfc5a7510710613637d01d.js">
+		</script>
+		</div>
+		<div class="code" data-target="cpp">
+		<script 						src="https://gist.github.com/RedTuna614/12a81178ec0e647e2ee7127ed2ead3e2.js">
+		</script>
+		</div>
+		</div>
+	</div>
+</div>	
+</main>
+<footer>
+	<h3> Matthew Gormsen </h3>
+	<a href="mailto:mwgormsen@gmail.com">mwgormsen@gmail.com</a>
+</footer>
+</body>
+</html>

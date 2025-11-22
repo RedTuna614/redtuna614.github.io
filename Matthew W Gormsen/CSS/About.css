@@ -1,0 +1,81 @@
+main{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+#contentBox{
+	background: rgba(23,17,20,0.6);
+	display:inline-flex;
+	flex-direction:row;
+	justify-content:center;
+	align-items:center;
+	flex-wrap:wrap;
+	box-sizing:border-box:
+	gap: 2rem;
+	padding: 2rem;
+	margin: 2rem auto;
+	box-sizing: border-box;
+}
+.TextBox{
+	color:white;
+	/*height:424px;*/
+	/*width:250px;*/
+	max-width:424px;
+	aspect-ratio:1/1;
+	text-align:center;
+	text-shadow: 0 0 20px black;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+	box-sizing:border-box;
+	padding: 2rem;
+}
+.TextBox h2{
+	/*font-size:30;*/
+	font-size: clamp(1.8rem, 5vw, 2.2rem);
+	margin: 0 0 1rem 0;
+	width:100%;
+}
+.TextBox p{
+	/*font-size:20;*/
+	font-size: clamp(1.1rem, 3.5vw, 1.4rem);
+	margin: 0;
+	line-height: 1.6;
+	width:100%;
+}
+#image{
+	overflow:hidden; 
+	max-height:660px;
+	max-width:591.2px; 
+	box-sizing:content-box;
+	ascpect-ratio:8/9;
+}
+#image img{
+	width:100%;
+	height:100%;
+	object-fit:contain;
+	display:block;
+}
+@media (max-width: 600px) {
+    	#contentBox {
+        	flex-direction: column;
+        	padding: 1.5rem;
+        	gap: 1.5rem;
+    	}
+
+    	.TextBox, #image 
+	{
+        	width: 100%;
+        	max-width: 400px;
+        	aspect-ratio: auto;
+    	}
+
+    	.TextBox {
+        	aspect-ratio: 1 / 1;
+    	}
+
+    	#image {
+        	aspect-ratio: 8 / 9;
+    	}
+}

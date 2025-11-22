@@ -1,0 +1,53 @@
+main{
+	display:flex;
+	flex-direction:row;
+	justify-content:center;
+	align-items:center;
+	flex-wrap:wrap;
+}
+.TextBox, #Charles{
+	flex: 1;
+	max-width:424px;
+	min-width:280px;
+	aspect-ratio: 1/1;
+}
+#Charles img{
+	width:100%;
+	height:100%;
+	object-fit:contain;
+	display:block;
+}
+.TextBox{
+	
+	/*height:424px;*/
+	/*width:491px;*/
+	background-color:grey;
+	text-align:center;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+	box-sizing:border-box;
+}
+.TextBox h2{
+	/*font-size:30;*/
+	font-size: clamp(1.8rem, 5vw, 2.2rem);
+	margin: 0 0 1rem 0;
+}
+.TextBox h4{
+	/*font-size:20;*/
+	font-size: clamp(1.1rem, 3.5vw, 1.4rem);
+	margin: 0;
+	line-height: 1.6;
+}
+@media (max-width: 600px) {
+    	main{
+		flex-direction:column;
+	}
+	.TextBox, #Charles 
+	{
+       		width: 100%;
+        	max-width: 400px;
+        	aspect-ratio: 1 / 1;
+   	}
+}
