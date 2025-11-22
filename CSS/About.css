@@ -60,8 +60,8 @@ main{
 @media (max-width: 600px) {
     	#contentBox {
         	flex-direction: column;
-        	padding: 1.5rem;
-        	gap: 1.5rem;
+        	padding: 3rem;
+        	gap: 3rem;
     	}
 
     	.TextBox, #image 
@@ -77,5 +77,6 @@ main{
 
     	#image {
         	aspect-ratio: 8 / 9;
+		padding-top:2rem;
     	}
 }
