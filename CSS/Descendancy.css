@@ -86,6 +86,7 @@ iframe{
 	opacity:0;
 	overflow:hidden;
 	/*display:none;*/
+	max-width:900px;
 	text-align:center;
 	transition:
 		max-height 0.6s ease,
@@ -138,8 +139,4 @@ iframe{
 }
 .tabText.select{
 	background-color:#04AA6D;
-}
-
-@media(max-width:600px){
-	#codeSnippets{max-width:600px;}
 }
