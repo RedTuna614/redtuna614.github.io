@@ -144,8 +144,9 @@ iframe{
 }
 @media(max-width:600px)
 {
-	#codeSnippets{max-height:6000px;}
+	/*#codeSnippets{max-height:2400px;}*/
 	.codeSect{max-width:100%;}
 	.codeSect p{width:100%;}
+	.codeSect.show{max-height:2400px;}
 	.codeBox{width:100%;}
 }
