@@ -147,6 +147,6 @@ iframe{
 	/*#codeSnippets{max-height:2400px;}*/
 	.codeSect{max-width:100%;}
 	.codeSect p{width:100%;}
-	.codeSect.show{max-height:12000px;}
+	.codeSect.show{max-height:24000px;}
 	.codeBox{width:100%;}
 }
