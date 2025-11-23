@@ -145,5 +145,5 @@ iframe{
 @media(max-width:600px)
 {
 	.codeSect.show{max-height:2400px;}
-	.codeSect p{max-width:600px;}
+	/*.codeSect p{max-width:600px;}*/
 }
