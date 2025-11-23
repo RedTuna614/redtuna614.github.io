@@ -111,7 +111,8 @@ iframe{
 }
 .codeBox .gist .gist-data{
 	overflow:auto;
-	max-height: 700px;
+	/*max-height: 700px;*/
+	height:100%;
 	max-width:890px;
 	border: 1px;
 	margin: 0;
@@ -126,7 +127,8 @@ iframe{
 }
 .code .gist .gist-data{
 	overflow:auto;
-	max-height: 700px;
+	/*max-height: 700px;*/
+	height:100%;
 	max-width:890px;
 	border:1px;
 	margin:0;
