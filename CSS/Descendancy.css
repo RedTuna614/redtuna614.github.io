@@ -142,8 +142,3 @@ iframe{
 .tabText.select{
 	background-color:#04AA6D;
 }
-@media(max-width:600px)
-{
-	.codeSect.show{max-height:2400px;}
-	/*.codeSect p{max-width:600px;}*/
-}
