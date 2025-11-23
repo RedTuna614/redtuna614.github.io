@@ -147,6 +147,8 @@ iframe{
 	/*#codeSnippets{max-height:2400px;}*/
 	.codeSect{max-width:100%;}
 	.codeSect p{width:100%;}
-	.codeSect.show{max-height:24000px;}
+	.codeSect.show{max-height:6800px;}
 	.codeBox{width:100%;}
+	.codeBox .gist .gist-data{max-height:500px;}
+	.code .gist .gist-data{max-height:500px;}
 }
