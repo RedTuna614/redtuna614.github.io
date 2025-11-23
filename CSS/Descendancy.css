@@ -144,6 +144,7 @@ iframe{
 }
 @media(max-width:600px)
 {
+	#codeSnippets{max-height:2400px;}
 	.codeSect{max-width:100%;}
 	.codeSect p{width:100%;}
 	.codeBox{width:100%;}
