@@ -145,6 +145,6 @@ iframe{
 @media(max-width:600px)
 {
 	.codeSect{max-width:100%;}
-	/*.codeSect p{max-width:600px;}*/
-	.codeBox{max-width:100%;}
+	.codeSect p{width:100%;}
+	.codeBox{width:100%;}
 }
