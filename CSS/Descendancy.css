@@ -151,6 +151,6 @@ iframe{
 	.codeBox{width:100%;}
 	.codeBox .gist .gist-data{max-height:500px;}
 	.code .gist .gist-data{max-height:500px;}
-	.codeBox .gist .gist-file{max-width:600px;}
-	.code .gist .gist-file{max-width:600px;}
+	.codeBox .gist .gist-file{max-width:300px;}
+	.code .gist .gist-file{max-width:300px;}
 }
