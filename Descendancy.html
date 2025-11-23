@@ -15,6 +15,14 @@
 		{ showCodeSection('CombatManager') });
 		document.getElementById('crusadeBtn').addEventListener('click', ()=>
 		{ showCodeSection('CrusaderAI') });
+		if(screen.availWidth)
+		{
+			document.getElementById('crusade-cpp').src = 						'https://gist.github.com/RedTuna614/c4960e421297640037abfaa25ec74214.js?file=CrusaderTargetFinder.cpp';
+			document.getElementById('crusade-h').src = 
+			'https://gist.github.com/RedTuna614/16eacfe9b57123cee9aa296d4f9d26a4.js?file=CrusaderTargetFinder.h';
+			document.getElementById('combatManager-cpp').src = 
+			'https://gist.github.com/RedTuna614/8e146e5140813e56ba80eafebf1ac32b.js?file=CombatManager.cpp';
+		}
 	});
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -73,7 +81,8 @@ My capstone project is an isometric squad based tactics game.  Within the game t
 		<h3>Turn Order Sorting algorithm</h3>
 		<p> When the combat manager, the system that controls the turn order, was originally written it stored all units in combat in an unsorted array, and kept track of whose turn it was with an integer called active unit.  While this worked, when adding the UI for the turn order, I felt that rather than sorting the unsorted turn order in the UI's blueprint, a new way of tracking the turn order was needed, specifically one that used a sorted array of all units in combat.  I thought it would be better to rewrite how the combat manager tracked the order rather than just sorting it in the UI, because this way the turn order would only be tracked in one location, the combat manager, rather than two different places with the UI tracking a sorted turn order and the combat manager tracking an unsorted turn order.  Below is the algorithm I wrote to sort and track the turn order in the combat manager.  In hindsight, knowing what I do now I'd rewrite the algorithm to use built the functions built into TArrays in Unreal such as sort, pushback, and popback. <br> </p>
 		<div class="codeBox">
-			<script src="https://gist.github.com/RedTuna614/8e146e5140813e56ba80eafebf1ac32b.js">
+			<script id="combatManager-cpp"
+				src="https://gist.github.com/RedTuna614/8e146e5140813e56ba80eafebf1ac32b.js">
 			</script>
 		</div>
 	</div>
@@ -98,12 +107,12 @@ My capstone project is an isometric squad based tactics game.  Within the game t
 			</button>
 		</div>
 		<div class="code" data-target="header">
-		<script
+		<script id="crusade-h"
 		src="https://gist.github.com/RedTuna614/16eacfe9b57123cee9aa296d4f9d26a4.js">
 		</script>
 		</div>
 		<div class="code" data-target="cpp">
-		<script
+		<script id="crusade-cpp"
 		src="https://gist.github.com/RedTuna614/c4960e421297640037abfaa25ec74214.js">
 		</script>
 		</div>
