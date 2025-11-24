@@ -7,6 +7,7 @@
 	box-sizing: border-box;
 }
 .Project{
+	background-size:cover;
 	text-align:center;
 	color:white;
 	/*font-size:30px;*/
