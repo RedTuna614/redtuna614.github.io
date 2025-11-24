@@ -28,6 +28,7 @@ p{
 .project button {
     	max-height:353px;
     	height: 100%;
+	aspect-ratio:7/4;
     	padding-bottom: 56.25%;
     	background-size: cover;
     	background-position: center;
