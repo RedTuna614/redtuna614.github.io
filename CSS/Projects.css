@@ -65,5 +65,5 @@ p{
         	padding-bottom: 56.25%;
     	}
 		.projTitle
-		{bottom:1rem;}
+		{bottom:-1rem;}
 }
