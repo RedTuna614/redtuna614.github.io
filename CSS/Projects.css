@@ -64,5 +64,6 @@ p{
         	height: auto;
         	padding-bottom: 56.25%;
     	}
-		.projectTitle{bottom:3rem;}
+		.projTitle
+		{bottom:3rem;}
 }
