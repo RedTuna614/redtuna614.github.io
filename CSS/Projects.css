@@ -55,13 +55,14 @@ p{
         	float: none;
     	}
     	.rows
-	{
+		{
 		flex-direction:column;
 		gap:1rem;
-	}
-    	.project button {
+		}
+    	.project button 
+		{
         	height: auto;
         	padding-bottom: 56.25%;
     	}
-	.projectTitle{bottom:1rem;}
+		.projectTitle{bottom:3rem;}
 }
