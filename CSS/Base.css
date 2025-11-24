@@ -51,4 +51,5 @@ footer h3{
 @media (max-width: 600px) {
     	header h4 ul { flex-direction: column; }
     	header h4 ul li { float: none; text-align: center; }
+		footer{position:relative;}
 }
