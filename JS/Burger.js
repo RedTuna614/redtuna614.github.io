@@ -1,6 +1,7 @@
 document.getElementById('nav-toggle').addEventListener('change', function()
 {
 	document.querySelector('main').classList.toggle('hide');
+	document.querySelector('footer').classList.toggle('hide');
 });
 document.addEventListener('DOMContentLoaded', () =>
 {

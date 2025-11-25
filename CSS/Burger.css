@@ -83,6 +83,7 @@
 	{transform:rotate(-45deg) translate(6px, -6px);}
 	
 	main.hide{display:none;}
+	footer.hide{display:none;}
 }
 @media(min-width:601px){
 	.hamburger, #nav-toggle{display:none;}
