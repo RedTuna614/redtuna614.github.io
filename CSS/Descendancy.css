@@ -148,6 +148,7 @@ iframe{
 @media(max-width:600px)
 {
 	/*#codeSnippets{max-height:2400px;}*/
+	.Project h2{background-color:black;}
 	.codeSect{max-width:100%;}
 	.codeSect p{width:100%;}
 	.codeSect.show{max-height:6800px;}
